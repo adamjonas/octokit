@@ -83,6 +83,8 @@ module Octokit
         response.body
       end
 
+      end
+
       response
     end
 
