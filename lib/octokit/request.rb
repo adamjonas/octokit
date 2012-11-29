@@ -71,6 +71,7 @@ module Octokit
         if Octokit.request_host
           request.headers['Host'] = Octokit.request_host
         end
+      end
 
       self.last_modified = response.headers['Last-Modified']
       self.etag = response.headers['ETag'].gsub('"', '') unless response.headers['ETag'].nil?
@@ -81,8 +82,6 @@ module Octokit
         response.body + request(method, next_url, options, version, authenticate, raw, force_urlencoded)
       else
         response.body
-      end
-
       end
 
       response
