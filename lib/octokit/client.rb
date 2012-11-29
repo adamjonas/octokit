@@ -25,6 +25,8 @@ require 'octokit/client/contents'
 require 'octokit/client/markdown'
 require 'octokit/client/emojis'
 require 'octokit/client/statuses'
+require 'octokit/client/say'
+require 'octokit/client/rate_limit'
 
 module Octokit
   class Client
@@ -63,5 +65,7 @@ module Octokit
     include Octokit::Client::Markdown
     include Octokit::Client::Emojis
     include Octokit::Client::Statuses
+    include Octokit::Client::Say
+    include Octokit::Client::RateLimit
   end
 end
